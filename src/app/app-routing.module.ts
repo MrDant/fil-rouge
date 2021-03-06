@@ -4,9 +4,7 @@ import { EditPasswordComponent } from "./editPassword/editPassword.component";
 import { MyAccountComponent } from "./myAccount/myAccount.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./View/login/login.component";
-import { AuthenticationGuard } from "./UI/guard/authentication.guard";
 import { RegisterComponent } from "./View/register/register.component";
-import { ProductComponent } from "./View/product/product.component";
 import { AboutUsComponent } from "./aboutUs/aboutUs.component";
 import { ContactComponent } from "./contact/contact.component";
 
@@ -21,7 +19,6 @@ const routes: Routes = [
       { path: "", component: HomeComponent },
       { path: "login", component: LoginComponent },
       { path: "register", component: RegisterComponent },
-      { path: "product/{id}", component: ProductComponent },
     ],
   },
   { path: "myAccount", component: MyAccountComponent },

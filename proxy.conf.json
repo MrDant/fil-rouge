@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://localhost",
+    "target": "http://ril-l12-grpa-01.numerilab-cesi.fr/",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": { "^/api": "" }

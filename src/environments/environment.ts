@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://localhost"
+  apiUrl: "http://ril-l12-grpa-01.numerilab-cesi.fr",
 };
 
 /*
