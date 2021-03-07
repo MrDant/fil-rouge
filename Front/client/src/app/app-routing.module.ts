@@ -6,9 +6,9 @@ import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./view/login/login.component";
 import { AuthenticationGuard } from "./UI/guard/authentication.guard";
 import { RegisterComponent } from "./view/register/register.component";
-import { AboutUsComponent } from './aboutUs/aboutUs.component';
-import { ContactComponent } from './contact/contact.component';
 import { CatalogueComponent } from './View/catalogue/catalogue.component';
+import { AboutUsComponent } from "./aboutUs/aboutUs.component";
+import { ContactComponent } from "./contact/contact.component";
 
 const routes: Routes = [
     { path: "editPassword", component: EditPasswordComponent },
@@ -28,7 +28,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
