@@ -5,7 +5,7 @@ import { FormBuilder } from "@angular/forms";
 @Component({
   selector: 'app-my-account',
   templateUrl: './myAccount.component.html',
-  styleUrls: ['./myAccount.component.css']
+  styleUrls: ['./myAccount.component.scss']
 })
 export class MyAccountComponent implements OnInit {
   title = 'Mon compte';
