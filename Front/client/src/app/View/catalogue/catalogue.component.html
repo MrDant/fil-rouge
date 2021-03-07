@@ -1,0 +1,11 @@
+<div class="content" role="main">
+    <div id="rechercher">
+
+    </div>
+    <div>
+        <div class="categories" *ngFor="let category of categories">
+            <a routerLink="/"><img  class="category-img" src="{{ category.img }}"></a>
+            {{ category.name }}
+        </div>
+    </div>
+</div>
