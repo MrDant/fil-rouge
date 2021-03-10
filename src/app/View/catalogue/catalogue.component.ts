@@ -14,17 +14,17 @@ export class CatalogueComponent implements OnInit {
   ngOnInit(): void {
     this.categories = [{
       name: "paroi de douche",
-      img: "../../../../assets/paroi-de-douche.jpg",
+      image: "../../../../assets/paroi-de-douche.jpg",
       details:""
     },
   {
     name: "cheminée",
-    img: "../../../../assets/cheminee.jpg",
+    image: "../../../../assets/cheminee.jpg",
     details:""
   },
   {
     name: "baie vitrée",
-    img: "../../../../assets/baie-vitree.jpg",
+    image: "../../../../assets/baie-vitree.jpg",
     details:""
   }
 ]

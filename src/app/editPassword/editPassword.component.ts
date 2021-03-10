@@ -4,7 +4,7 @@ import { FormBuilder } from "@angular/forms";
 @Component({
   selector: 'app-editPassword',
   templateUrl: './editPassword.component.html',
-  styleUrls: ['./editPassword.component.css']
+  styleUrls: ['./editPassword.component.scss']
 })
 export class EditPasswordComponent implements OnInit {
 

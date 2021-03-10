@@ -1,5 +1,5 @@
 export class Category{
     name: string;
-    img: string;
+    image: string;
     details: string;
 }

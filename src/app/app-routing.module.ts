@@ -3,12 +3,14 @@ import { Routes, RouterModule } from "@angular/router";
 import { EditPasswordComponent } from "./editPassword/editPassword.component";
 import { MyAccountComponent } from "./myAccount/myAccount.component";
 import { HomeComponent } from "./home/home.component";
-import { LoginComponent } from "./view/login/login.component";
+import { LoginComponent } from "./View/login/login.component";
 import { AuthenticationGuard } from "./UI/guard/authentication.guard";
-import { RegisterComponent } from "./view/register/register.component";
+import { RegisterComponent } from "./View/register/register.component";
 import { CatalogueComponent } from './View/catalogue/catalogue.component';
 import { AboutUsComponent } from "./aboutUs/aboutUs.component";
 import { ContactComponent } from "./contact/contact.component";
+import { ProductDetailsComponent } from './View/product-details/product-details.component';
+
 
 const routes: Routes = [
     { path: "editPassword", component: EditPasswordComponent },
@@ -22,6 +24,7 @@ const routes: Routes = [
         ],
     },
   {path:'myAccount', component:MyAccountComponent},
+  {path:'product/:id', component:ProductDetailsComponent},
   {path:'about-us', component:AboutUsComponent},
   {path:'contact', component:ContactComponent},
   {path:'catalogue', component:CatalogueComponent}

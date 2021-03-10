@@ -1,1 +1,35 @@
-<p>product-details works!</p>
+<div class="content" role="main">
+    <div class="wrapper">  
+        <div class="product">
+            <img  class="product-img" [src]="product?.image">
+        </div>
+        <div class="product-title">
+            <B>{{ product?.name }}</B><br>
+            {{product?.price}}<br>
+        </div>  
+        <div class="command">
+            {{product.price}}<br><br>
+            <label for="quantity-label">Choississez la quantité:</label>
+            <input list="quantity" />
+            <datalist id="quantity">
+                <option value="">--Nombre voulu--</option>
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+                <option value="4"></option>
+                <option value="5"></option>
+                <option value="6"></option>
+            </datalist><br>
+            <button type="submit" class="button" color="blue">Ajouter au panier</button><br>
+            En stock: {{product?.stock}}
+        </div>
+        <div class="technical-details">
+        <p>
+            - {{ product?.name }}<br>
+            - catégorie: {{ product?.category }}<br>
+            - {{ product?.description }}
+        </p>
+        
+        </div>
+    </div>
+</div>
