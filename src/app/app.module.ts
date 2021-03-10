@@ -12,11 +12,12 @@ import { EditPasswordComponent } from "./editPassword/editPassword.component";
 import { MyAccountComponent } from "./myAccount/myAccount.component";
 import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./View/login/login.component";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { RegisterComponent } from "./View/register/register.component";
 import { AboutUsComponent } from './aboutUs/aboutUs.component';
 import { CatalogueComponent } from './View/catalogue/catalogue.component';
 import { ProductDetailsComponent } from './View/product-details/product-details.component';
+import { TokenInterceptor } from './UI/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,13 @@ import { ProductDetailsComponent } from './View/product-details/product-details.
     BrowserAnimationsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
