@@ -21,8 +21,6 @@ export class ProductService {
   getProductDetails(id: number): Observable<Product> {
     return this.http
       .get<Product>("/catalog/products/" + id)
-      .pipe(
-        map((e) => e["hydra:member"].map((product) => new Product(product)))
-      );
+      .pipe(map((e) => new Product(e)));
   }
 }
