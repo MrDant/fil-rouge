@@ -1,4 +1,4 @@
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from "./contact/contact.component";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
@@ -14,10 +14,10 @@ import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./View/login/login.component";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { RegisterComponent } from "./View/register/register.component";
-import { AboutUsComponent } from './aboutUs/aboutUs.component';
-import { CatalogueComponent } from './View/catalogue/catalogue.component';
-import { ProductDetailsComponent } from './View/product-details/product-details.component';
-import { TokenInterceptor } from './UI/token.interceptor';
+import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
+import { CatalogueComponent } from "./View/catalogue/catalogue.component";
+import { ProductDetailsComponent } from "./View/product-details/product-details.component";
+import { TokenInterceptor } from "./UI/token.interceptor";
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { TokenInterceptor } from './UI/token.interceptor';
     RegisterComponent,
     AboutUsComponent,
     CatalogueComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
