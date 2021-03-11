@@ -1,17 +1,15 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from "./View/home/home.component";
 import { EditPasswordComponent } from "./editPassword/editPassword.component";
-import { MyAccountComponent } from "./myAccount/myAccount.component";
-import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./View/login/login.component";
-import { RegisterComponent } from "./View/register/register.component";
-import { CatalogueComponent } from "./View/catalogue/catalogue.component";
+import { NgModule } from "@angular/core";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
+import { CatalogueComponent } from "./View/catalogue/catalogue.component";
 import { ContactComponent } from "./contact/contact.component";
+import { RegisterComponent } from "./View/register/register.component";
+import { MyAccountComponent } from "./myAccount/myAccount.component";
 
 const routes: Routes = [
-  { path: "editPassword", component: EditPasswordComponent },
-  { path: "myAccount", component: MyAccountComponent },
   {
     path: "",
     children: [
@@ -23,6 +21,7 @@ const routes: Routes = [
   { path: "account", component: MyAccountComponent },
   { path: "about-us", component: AboutUsComponent },
   { path: "contact", component: ContactComponent },
+  { path: "editPassword", component: EditPasswordComponent },
   { path: "catalogue", component: CatalogueComponent },
 ];
 

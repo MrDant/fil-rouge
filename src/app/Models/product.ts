@@ -1,11 +1,12 @@
 import { environment } from "../../environments/environment";
 
-export class Category {
+export class Product {
+  id: number;
   name: string;
+  description: string;
   image: string;
-  details: string;
 
-  constructor(raw: Category) {
+  constructor(raw: Product) {
     Object.assign(this, raw);
     this.image = this.image
       ? environment.apiUrl + this.image

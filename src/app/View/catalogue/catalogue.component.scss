@@ -1,43 +1,20 @@
-@import "src/assets/scss/variables";
-@import "src/assets/scss/theme";
-
 .content {
     display: flex;
-    margin: 82px auto 32px;
+    margin: auto;
     flex-direction: column;
     align-items: center;
+    background-color: antiquewhite;
     text-align: center;
 }
 
 .categories {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    .category {
-      border-radius: 5%;
-      border: 1px solid black;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: grey;
-      margin: 2rem;
-      h3 {
-        position: absolute;
-        bottom: 0;
-        color: #29a2fc;
-        font-weight: bold;
-        text-transform: capitalize;
-        text-align: center;
-        width: 100%;
-        background-color: #ffffffbf;
-        margin: 0;
-        padding: 2rem 0;
-      }
-    }
+    display: inline;
+    margin-left: 15px;
 }
 
-img {
-  height: 100% !important;
-  width: auto !important;
+.category-img {
+    margin-top: 30px;
+    height:auto;
+    max-width: 20%;
+    background-color: beige;
 }
