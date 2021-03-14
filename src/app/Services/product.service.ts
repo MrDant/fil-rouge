@@ -24,4 +24,12 @@ export class ProductService {
         map((e) => e["hydra:member"].map((product) => new Product(product)))
       );
   }
+
+  getProductByCategoryId(id: any) {
+    return this.http
+      .get<Product[]>(`/catalog/categories/${id}/products`)
+      .pipe(
+        map((e) => e["hydra:member"].map((product) => new Product(product)))
+      );
+  }
 }

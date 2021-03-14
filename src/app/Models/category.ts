@@ -1,9 +1,9 @@
 import { environment } from "../../environments/environment";
 
 export class Category {
+  id: number;
   name: string;
   image: string;
-  details: string;
 
   constructor(raw: Category) {
     Object.assign(this, raw);

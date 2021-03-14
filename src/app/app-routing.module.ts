@@ -8,6 +8,7 @@ import { CatalogueComponent } from "./View/catalogue/catalogue.component";
 import { ContactComponent } from "./contact/contact.component";
 import { RegisterComponent } from "./View/register/register.component";
 import { MyAccountComponent } from "./myAccount/myAccount.component";
+import { CategoryComponent } from "./View/category/category.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "editPassword", component: EditPasswordComponent },
   { path: "catalogue", component: CatalogueComponent },
+  { path: "categorie/:id", component: CategoryComponent },
 ];
 
 @NgModule({

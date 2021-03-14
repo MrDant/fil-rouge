@@ -18,6 +18,7 @@ import { EditPasswordComponent } from "./editPassword/editPassword.component";
 import { LoginComponent } from "./View/login/login.component";
 import { MyAccountComponent } from "./myAccount/myAccount.component";
 import { BrowserModule } from "@angular/platform-browser";
+import { CategoryComponent } from './View/category/category.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { BrowserModule } from "@angular/platform-browser";
     AboutUsComponent,
     CatalogueComponent,
     ProductDetailsComponent,
+    CategoryComponent,
   ],
   imports: [
     BrowserModule,
