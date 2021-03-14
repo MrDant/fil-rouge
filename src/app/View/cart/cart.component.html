@@ -1,0 +1,16 @@
+<div class="content">
+  <div class="wrapper">
+    <div class="cartCard">
+      <div class="cartProducts" *ngFor="let item of cart.items">
+        <img class="category-img" src="{{ item.image }}">
+        {{ item.name }}<br>
+        {{ item.price }}<br>
+        {{ item.quantity }}<br>
+      </div>
+    </div>
+    <div class="commandCard">
+      {{cart?.totals}}<br><br>
+      <button type="submit" class="button">Commander</button>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,7 @@ import { CommonModule } from "@angular/common";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { TokenInterceptor } from "./UI/token.interceptor";
+import { CartComponent } from './View/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TokenInterceptor } from "./UI/token.interceptor";
     AboutUsComponent,
     CatalogueComponent,
     ProductDetailsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
