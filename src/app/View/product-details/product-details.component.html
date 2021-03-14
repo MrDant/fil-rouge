@@ -1,15 +1,18 @@
 <div class="content" role="main">
-    <div class="wrapper">  
+    <div class="wrapper">
+
         <div class="product">
             <img  class="product-img" [src]="product?.image">
         </div>
+
         <div class="product-title">
-            <B>{{ product?.name }}</B><br>
-            {{product?.price}}<br>
-        </div>  
+            <p class="margin-text"><B>{{ product?.name }}</B></p>
+            <p class="margin-text">Prix : {{product?.price}} €</p><br>
+        </div>
+
         <div class="command">
-            {{product.price}}<br><br>
-            <label for="quantity-label">Choississez la quantité:</label>
+            <br><p class="style-command"><B>{{product?.price}} €</B></p><br>
+            <label class="texte-blanc" for="quantity-label">Choississez la quantité :</label>
             <input list="quantity" />
             <datalist id="quantity">
                 <option value="">--Nombre voulu--</option>
@@ -19,24 +22,19 @@
                 <option value="4"></option>
                 <option value="5"></option>
                 <option value="6"></option>
-            </datalist><br>
+            </datalist><br><br>
             <button type="submit" class="button" color="blue">Ajouter au panier</button><br>
-            En stock: {{product?.stock}}
+            <p class="texte-blanc">En stock: {{product?.stock}}</p>
         </div>
+
         <div class="technical-details">
-        <p>
-            - {{ product?.name }}<br>
-            - catégorie: {{ product?.category }}<br>
-            - {{ product?.description }}
-        </p>
-        
+			<p>DÉTAILS TECHNIQUES :</p>
+			<p>
+				- {{ product?.name }}<br>
+				- Catégorie : {{ product?.category }}<br>
+				- {{ product?.description }}
+			</p>
         </div>
     </div>
 
-
-
-
-
-
-    
 </div>

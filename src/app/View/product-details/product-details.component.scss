@@ -1,15 +1,17 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/theme";
+
 .content {
     display: flex;
     margin: auto;
     flex-direction: column;
     align-items: center;
-    background-color: antiquewhite;
     text-align: center;
 }
 
 
 .product-img {
-    
+
     margin-top: 30px;
     height:auto;
     max-width: 100%;
@@ -17,9 +19,11 @@
 }
 
 .wrapper {
-    background-color: #FAFAFA;
+    background-color: #F0F0F0;
     border-radius: 8px;
     padding: 8px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     margin-left: 10%;
     margin-right: 10%;
     display: grid;
@@ -28,25 +32,49 @@
     grid-auto-rows: minmax(100px, auto);
 }
 
+.margin-text {
+	margin-left: 3%;
+}
+
+.quantity-label{
+	color: white;
+}
+
 .product {
-    
+
     grid-column: 1 / 2;
     grid-row: 1;
+	  margin-left: 5%;
 }
 
 .product-title {
     grid-column: 2/3;
     grid-row: 1;
+  	text-align: left;
 }
 
 .command {
     grid-column: 3/3;
     grid-row: 1/2;
-    background-color: darkslategray;
+    background-color: #333333;
+    width: 90%;
+    height: 70%;
+    margin-top: 25px;
 }
 
 .technical-details {
     text-align: left;
-    grid-column: 1/2;
+    grid-column: 1/4;
     grid-row: 2;
+  	margin-left: 5%;
+}
+
+.style-command {
+  margin-top: 5px;
+  color: white;
+}
+
+
+.texte-blanc {
+  color: white;
 }
