@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { Product } from "../Models/product";
-import { map, tap } from "rxjs/operators";
+import { map } from "rxjs/operators";
 import { Category } from "../Models/category";
 
 @Injectable({
@@ -25,12 +25,13 @@ export class ProductService {
       );
   }
 
-  getProductByCategoryId(id: any) {
+  getProductByCategoryId(id: any): Observable<Product[]> {
     return this.http
       .get<Product[]>(`/catalog/categories/${id}/products`)
       .pipe(
         map((e) => e["hydra:member"].map((product) => new Product(product)))
       );
+  }
   getProductDetails(id: number): Observable<Product> {
     return this.http
       .get<Product>("/catalog/products/" + id)

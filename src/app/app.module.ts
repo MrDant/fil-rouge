@@ -9,7 +9,6 @@ import { MyAccountComponent } from "./myAccount/myAccount.component";
 import { HomeComponent } from "./View/home/home.component";
 import { LoginComponent } from "./View/login/login.component";
 import { RegisterComponent } from "./View/register/register.component";
-import { AboutUsComponent } from "./aboutUs/aboutUs.component";
 import { CatalogueComponent } from "./View/catalogue/catalogue.component";
 import { ProductDetailsComponent } from "./View/product-details/product-details.component";
 import { AppRoutingModule } from "./app-routing.module";
@@ -18,6 +17,8 @@ import { CommonModule } from "@angular/common";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { TokenInterceptor } from "./UI/token.interceptor";
+import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
+import { ModalModule } from "angular-custom-modal";
 
 @NgModule({
   declarations: [
@@ -42,13 +43,6 @@ import { TokenInterceptor } from "./UI/token.interceptor";
     BrowserAnimationsModule,
     HttpClientModule,
     ModalModule,
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptor,
-      multi: true,
-    },
   ],
   providers: [
     {

@@ -5,10 +5,10 @@ import { MyAccountComponent } from "./myAccount/myAccount.component";
 import { ProductDetailsComponent } from "./View/product-details/product-details.component";
 import { LoginComponent } from "./View/login/login.component";
 import { RegisterComponent } from "./View/register/register.component";
-import { AboutUsComponent } from "./aboutUs/aboutUs.component";
 import { ContactComponent } from "./contact/contact.component";
-import { HomeComponent } from "./View/home/home.component";
 import { CatalogueComponent } from "./View/catalogue/catalogue.component";
+import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
+import { NgModule } from "@angular/core";
 
 const routes: Routes = [
   {

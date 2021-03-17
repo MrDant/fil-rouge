@@ -1,5 +1,6 @@
-export class Category{
-    name: string;
-    image: string;
-    details: string;
+import { VisualObject } from "./base";
+
+export class Category extends VisualObject {
+  name: string;
+  details: string;
 }
