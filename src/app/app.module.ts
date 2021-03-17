@@ -41,6 +41,14 @@ import { TokenInterceptor } from "./UI/token.interceptor";
     CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ModalModule,
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
   ],
   providers: [
     {

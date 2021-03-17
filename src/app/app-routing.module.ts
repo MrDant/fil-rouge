@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
+import { HomeComponent } from "./View/home/home.component";
 import { EditPasswordComponent } from "./editPassword/editPassword.component";
 import { MyAccountComponent } from "./myAccount/myAccount.component";
 import { ProductDetailsComponent } from "./View/product-details/product-details.component";
@@ -19,7 +19,7 @@ const routes: Routes = [
       { path: "register", component: RegisterComponent },
     ],
   },
-  { path: "myAccount", component: MyAccountComponent },
+  { path: "account", component: MyAccountComponent },
   { path: "about-us", component: AboutUsComponent },
   { path: "contact", component: ContactComponent },
   { path: "editPassword", component: EditPasswordComponent },

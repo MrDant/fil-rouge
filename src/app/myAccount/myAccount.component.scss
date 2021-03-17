@@ -1,3 +1,6 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/theme";
+
 #title {
     margin-bottom: 70px;
 }
@@ -16,37 +19,25 @@ body {
 
 .content {
     display: flex;
-    margin: 82px auto 32px;
+    margin: 25px auto 32px;
     padding: 0 16px;
     max-width: 960px;
     flex-direction: column;
     align-items: center;
 }
 
-/*.button {
-    margin-top: 80px;
-    background-color: #FFFFFF;
-      padding: 7px 25px 7px 25px;
-      color: #707070;
-      border: 1px solid #707070;
-}*/
-
-.button, .button :hover {
-      margin-top: 80px;
-      background-color: #0066ff;
-      padding: 7px 25px 7px 25px;
-      border: 1px solid #707070;
-  	  border-radius: 50px;
-  	  color: #FFFFFF;
-  }
-
-.btn-mdp {
-  background-color: #25BC76;
+$button_width:200px;
+.action-button {
+    font-size: 20px;
+    button {
+      font-size: 20px;
+      font-weight: 200;
+      width: $button_width;
+	  margin-left: 50px;
+	  
+    }
 }
 
-.btn-save {
-  background-color: #319BFF;
-}
 
 .champ {
     width: 100%;
@@ -56,11 +47,11 @@ body {
 
 .champ .collabel {
     width: 15%;
-    text-align: left;
+	font-size: 15px;
 }
 
 .champ .colinput {
-    width: 50%;
+    width: 80%;
 }
 
 .champ label {
@@ -77,11 +68,7 @@ body {
 
 #form {
     width: 100%;
-    margin-left: 10%;
     margin-right: auto;
+	@include form;
 }
 
-.button:nth-child(1) {
-    margin-right: 80px;
-    margin-left: -15%;
-}
