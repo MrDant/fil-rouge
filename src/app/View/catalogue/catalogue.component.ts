@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Category } from "../../Models/category";
+import { ProductService } from "../../Services/product.service";
 @Component({
   selector: "app-catalogue",
   templateUrl: "./catalogue.component.html",
@@ -8,25 +9,11 @@ import { Category } from "../../Models/category";
 export class CatalogueComponent implements OnInit {
   categories: Category[];
 
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.categories = [
-      {
-        name: "paroi de douche",
-        img: "../../../../assets/paroi-de-douche.jpg",
-        details: "",
-      },
-      {
-        name: "cheminée",
-        img: "../../../../assets/cheminee.jpg",
-        details: "",
-      },
-      {
-        name: "baie vitrée",
-        img: "../../../../assets/baie-vitree.jpg",
-        details: "",
-      },
-    ];
+    this.productService
+      .getCategories()
+      .subscribe((cat) => (this.categories = cat));
   }
 }
