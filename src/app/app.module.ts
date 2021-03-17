@@ -18,7 +18,8 @@ import { EditPasswordComponent } from "./editPassword/editPassword.component";
 import { LoginComponent } from "./View/login/login.component";
 import { MyAccountComponent } from "./myAccount/myAccount.component";
 import { BrowserModule } from "@angular/platform-browser";
-import { CategoryComponent } from './View/category/category.component';
+import { CategoryComponent } from "./View/category/category.component";
+import { ModalModule } from "angular-custom-modal";
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CategoryComponent } from './View/category/category.component';
     CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ModalModule,
   ],
   providers: [
     {
