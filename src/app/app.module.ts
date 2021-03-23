@@ -18,9 +18,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { TokenInterceptor } from "./UI/token.interceptor";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
-import { ModalModule } from "angular-custom-modal";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AdminModule } from "./View/admin/admin.module";
+import { ModalModule } from './Modal/modal.module';
 
 @NgModule({
   declarations: [
