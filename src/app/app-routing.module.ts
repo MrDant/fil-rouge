@@ -8,6 +8,7 @@ import { RegisterComponent } from "./View/register/register.component";
 import { ContactComponent } from "./contact/contact.component";
 import { CatalogueComponent } from "./View/catalogue/catalogue.component";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
+import { StorageComponent } from './View/storage/storage.component';
 import { NgModule } from "@angular/core";
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "catalogue", component: CatalogueComponent },
   { path: "product/:id", component: ProductDetailsComponent },
+  { path: "storage", component: StorageComponent }
 ];
 
 @NgModule({

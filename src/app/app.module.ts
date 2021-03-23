@@ -21,6 +21,7 @@ import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AdminModule } from "./View/admin/admin.module";
 import { ModalModule } from './Modal/modal.module';
+import { StorageComponent } from './View/storage/storage.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ModalModule } from './Modal/modal.module';
     AboutUsComponent,
     CatalogueComponent,
     ProductDetailsComponent,
+    StorageComponent,
   ],
   imports: [
     BrowserModule,

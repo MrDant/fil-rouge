@@ -28,7 +28,8 @@ export class AppComponent implements OnInit {
           nav.url.includes("account") ||
           nav.url.includes("change-password") ||
           nav.url.includes("admin") ||
-          nav.url.includes("about")
+          nav.url.includes("about") ||
+          nav.url.includes("storage")
         ) {
           this.backgroundColor = "#FAFAFA";
         } else {
