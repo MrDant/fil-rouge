@@ -9,6 +9,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { CatalogueComponent } from "./View/catalogue/catalogue.component";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
 import { NgModule } from "@angular/core";
+import { CategoryComponent } from "./View/category/category.component";
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "catalogue", component: CatalogueComponent },
   { path: "product/:id", component: ProductDetailsComponent },
+  { path: "category/:id", component: CategoryComponent },
 ];
 
 @NgModule({
