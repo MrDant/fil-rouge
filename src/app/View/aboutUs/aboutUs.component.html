@@ -23,5 +23,85 @@
   </div>
 </div>
 <div style="text-align: center">
-  <button type="submit" class="button" color="blue">Nous contacter</button>
+  <button
+    type="submit"
+    class="button"
+    color="blue"
+    (click)="componentInsideModal.open()"
+  >
+    Nous contacter
+  </button>
 </div>
+<modal #componentInsideModal>
+  <ng-template #modalBody>
+    <div class="divModal">
+      <h2>Contactez-nous</h2>
+      <form
+        [formGroup]="form"
+        class="text-center"
+        id="form"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="form-grid">
+          <label for="lastname"> Nom : </label>
+          <input
+            id="lastname"
+            type="text"
+            placeholder="Dupont"
+            class="inputModal"
+            formControlName="lastname"
+          />
+          <label for="firstname"> Prenom : </label>
+          <input
+            id="firstname"
+            type="text"
+            placeholder="Jean"
+            class="inputModal"
+            formControlName="firstname"
+          />
+          <label for="mail"> Email : </label>
+          <input
+            id="mail"
+            type="text"
+            placeholder="jeandupont@gmail.com"
+            class="inputModal"
+            formControlName="mail"
+          />
+          <label for="object"> Objet : </label>
+          <input
+            id="object"
+            type="text"
+            placeholder="Sujet du contact"
+            class="inputModal"
+            formControlName="object"
+          />
+        </div>
+        <label for="message"> Message : </label>
+        <div>
+          <textarea
+            id="message"
+            placeholder="Message"
+            class="inputModal longmessage"
+          ></textarea>
+        </div>
+        <div class="modalBtn">
+          <br /><button type="submit" class="buttonModal" color="blue">
+            Envoyer</button
+          ><br />
+          <button
+            class="close"
+            data-dismiss="modal"
+            type="button"
+            aria-label="Close"
+            class="buttonModal"
+            color="blue"
+            (click)="componentInsideModal.close()"
+          >
+            Fermer
+          </button>
+        </div>
+      </form>
+    </div>
+  </ng-template>
+  <ng-template #modalFooter></ng-template>
+</modal>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder } from "@angular/forms";
 
 @Component({
   selector: "app-about-us",
@@ -6,7 +7,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./aboutUs.component.scss"],
 })
 export class AboutUsComponent implements OnInit {
-  constructor() {}
+  form: any;
+  constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({});
+  }
+
+  onSubmit(): void {
+    confirm("Mail envoyé");
+  }
 }

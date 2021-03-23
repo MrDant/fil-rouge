@@ -1,94 +1,36 @@
 <div class="content" role="main">
-    <div class="wrapper">  
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25768.096395800192!2d6.017138448063719!3d47.24519222518844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478d62faf0ee130b%3A0x409ce34b313ed30!2s25000%20Besan%C3%A7on!5e0!3m2!1sfr!2sfr!4v1614529896277!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-      
-        <div class="text">
-            <p>VerreTech est une entreprise de verrerie pour les professionnels.<br> 
-            Vous pourrez y trouver à la fois de vitraux comme des parois de douches, ou tout autre type de verrerie.<br>
-            Cette entreprise fu crée en 1955 par Mr. Emile Dupont, PDG de l'entreprise 
-            </p>
-            <p>Son chiffre d'affaire de 2017 s'élève à 2,1 millions d'euros</p>
-            <p>N'hésitez pas à nous contacter que ce soit pour un devis ou des informations complémentaires au 00-00-00-00-00 ou par mail à ... </p>
-        </div>
+  <div class="wrapper">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25768.096395800192!2d6.017138448063719!3d47.24519222518844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478d62faf0ee130b%3A0x409ce34b313ed30!2s25000%20Besan%C3%A7on!5e0!3m2!1sfr!2sfr!4v1614529896277!5m2!1sfr!2sfr"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
     </div>
-	
-	<button class="button" color="blue" (click)="componentInsideModal.open()">Contactez-nous</button>
-<modal #componentInsideModal>
-  <ng-template #modalBody>
-	<div  class="divModal">
-	  <h2>Contactez-nous</h2>
-	  <form [formGroup]="registerForm" class="text-center" id="form" (ngSubmit)="onSubmit()">
-	
-			<div class="champ">
-				<div class="collabel">
-					<p class="label"><label for="lastname">
-								Nom :
-							</label></p>
-					</div>
-					<div class="colinput">
-						<input id="lastname" type="text" placeholder="Dupont" class="inputModal"
-							formControlName="lastname">
-					</div>
-				</div>
-				
-				<div class="champ">
-					<div class="collabel">
-						<p class="label"><label for="firstname">
-								Prenom :
-							</label></p>
-					</div>
-					<div class="colinput">
-						<input id="firstname" type="text" placeholder="Jean" class="inputModal"
-							formControlName="firstname">
-					</div>
-				</div>
 
-							<div class="champ">
-					<div class="collabel">
-						<p class="label"><label for="mail">
-								Email :
-							</label></p>
-					</div>
-					<div class="colinput">
-						<input id="mail" type="text" placeholder="jeandupont@gmail.com" class="inputModal"
-							formControlName="mail">
-					</div>
-				</div>
-				
-							<div class="champ">
-					<div class="collabel">
-						<p class="label"><label for="object">
-								Objet :
-							</label></p>
-					</div>
-					<div class="colinput">
-						<input id="object" type="text" placeholder="Sujet du contact" class="inputModal"
-							formControlName="object">
-					</div>
-				</div>
-				
-							
-							<div class="champ">
-					<div class="collabel">
-						<p class="label"><label for="message">
-								Message :
-							</label></p>
-					</div>
-					<div class="colinput">
-						<textarea id="message" placeholder="Message" class="inputModal longmessage"></textarea>
-					</div>
-				</div>
-		<div class="modalBtn">		
-			<br><button type="submit" class="buttonModal" color="blue">Envoyer</button><br>
-			<button class="close" data-dismiss="modal" type="button" aria-label="Close" class="buttonModal" color="blue" (click)="componentInsideModal.close()">Fermer</button>
-		</div>
-	  </form>
-	</div>
-  </ng-template>
-  <ng-template #modalFooter></ng-template>
-</modal>
-<br>
-<br>
+    <div class="text">
+      <p>
+        VerreTech est une entreprise de verrerie pour les professionnels.<br />
+        Vous pourrez y trouver à la fois de vitraux comme des parois de douches,
+        ou tout autre type de verrerie.<br />
+        Cette entreprise fu crée en 1955 par Mr. Emile Dupont, PDG de
+        l'entreprise
+      </p>
+      <p>Son chiffre d'affaire de 2017 s'élève à 2,1 millions d'euros</p>
+      <p>
+        N'hésitez pas à nous contacter que ce soit pour un devis ou des
+        informations complémentaires au 00-00-00-00-00 ou par mail à ...
+      </p>
+    </div>
+  </div>
+
+  <button class="button" color="blue" (click)="componentInsideModal.open()">
+    Contactez-nous
+  </button>
+
+  <br />
+  <br />
 </div>
