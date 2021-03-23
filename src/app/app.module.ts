@@ -1,6 +1,6 @@
 import { ContactComponent } from "./contact/contact.component";
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { LOCALE_ID, NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { FooterComponent } from "./UI/layout/footer/footer.component";
 import { HeaderComponent } from "./UI/layout/header/header.component";
@@ -22,6 +22,7 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AdminModule } from "./View/admin/admin.module";
 import { ModalModule } from './Modal/modal.module';
 import { StorageComponent } from './View/storage/storage.component';
+import { CategoryComponent } from "./View/category/category.component";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { StorageComponent } from './View/storage/storage.component';
     AboutUsComponent,
     CatalogueComponent,
     ProductDetailsComponent,
+    CategoryComponent,
     StorageComponent,
   ],
   imports: [

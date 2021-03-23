@@ -2,7 +2,7 @@
   <div id="rechercher"></div>
   <div class="categories">
     <ng-container *ngFor="let category of categories">
-      <div routerLink="/categorie/{{ category.id }}" class="category">
+      <div routerLink="/category/{{ category.id }}" class="category">
         <img src="{{ category.image }}" />
         <h3>{{ category.name }}</h3>
       </div>

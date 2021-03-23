@@ -1,5 +1,13 @@
 <div class="wrapper">
-  <div *ngFor="let product of products">
-    {{ product.name }}
+  <div
+    *ngFor="let product of products"
+    class="product"
+    routerLink="/product/{{ product.id }}"
+  >
+    <div class="info">
+      <h4>{{ product.name }}</h4>
+      <span>A partir de {{ product.price || 0 }} €</span>
+    </div>
+    <img src="{{ product.image }}" />
   </div>
 </div>

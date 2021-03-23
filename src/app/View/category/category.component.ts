@@ -17,16 +17,8 @@ export class CategoryComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.productService
-    //  .getProductByCategoryId(this.route.snapshot.params.id)
-    //  .subscribe((data) => (this.products = data));
-    this.products = [
-      {
-        id: 1,
-        name: "string",
-        description: "string",
-        image: "string",
-      },
-    ];
+    this.productService
+      .getProductByCategoryId(this.route.snapshot.params.id)
+      .subscribe((data) => (this.products = data));
   }
 }
