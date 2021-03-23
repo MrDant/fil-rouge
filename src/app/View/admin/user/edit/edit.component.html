@@ -1,0 +1,78 @@
+<h3>Modifier l'utilisateur</h3>
+<form [formGroup]="form" class="text-center" id="form" (ngSubmit)="onSubmit()">
+  <div class="wrapper">
+    <div>
+      <div class="w-50">
+        <label for="lastname"> Nom : </label>
+        <input
+          id="lastname"
+          type="text"
+          placeholder="Dupont"
+          formControlName="lastname"
+        />
+      </div>
+      <div class="w-50">
+        <label for="firstname">Prénom : </label>
+        <input
+          id="firstname"
+          type="text"
+          placeholder="Jean"
+          formControlName="firstname"
+        />
+      </div>
+      <label for="phone"> Téléphone : </label
+      ><input
+        id="phone"
+        type="number"
+        placeholder="0600000000"
+        formControlName="phone"
+      />
+      <label for="address"> Adresse : </label
+      ><input
+        id="address"
+        type="text"
+        placeholder="2 rue des Jacquelines"
+        formControlName="address"
+      />
+      <div class="w-50">
+        <label for="CP"> Code Postal : </label
+        ><input
+          id="CP"
+          type="number"
+          placeholder="54000"
+          formControlName="postalcode"
+        />
+      </div>
+      <div class="w-50">
+        <label for="city"> Ville : </label
+        ><input
+          id="city"
+          type="text"
+          placeholder="Nancy"
+          formControlName="city"
+        />
+      </div>
+    </div>
+    <div>
+      <label for="mail"> Email : </label
+      ><input
+        id="mail"
+        type="text"
+        placeholder="jeandupont@gmail.com"
+        formControlName="email"
+      />
+      <label for="password"> Mot de passe : </label
+      ><input
+        id="password"
+        type="password"
+        placeholder="**********"
+        formControlName="password"
+      />
+      <label for="role"> Admin</label>
+      <input id="role" type="checkbox" formControlName="roles" />
+    </div>
+  </div>
+  <div class="action-container">
+    <button type="submit" color="blue">Modifier</button>
+  </div>
+</form>

@@ -1,23 +1,24 @@
 import { Component, OnInit } from "@angular/core";
-import {UserService} from "../../../Services/user.service";
+import { UserService } from "../../../Services/user.service";
 
 @Component({
   selector: "app-header",
   templateUrl: "./header.component.html",
-  styleUrls: ["./header.component.scss"]
+  styleUrls: ["./header.component.scss"],
 })
-export class HeaderComponent {
-  static adminArea: boolean;
+export class HeaderComponent implements OnInit {
+  adminArea: boolean;
 
-  constructor(private userService: UserService
-  ){
-    HeaderComponent.adminArea = false;
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.userService.currentUser.subscribe((user) => {
+      this.adminArea = user && user.roles.includes("ROLE_ADMIN");
+    });
   }
+
   get isConnected(): boolean {
     return this.userService.isConnected();
-  }
-  get isAdminArea(): boolean{
-    return HeaderComponent.adminArea;
   }
 
   logout(): void {

@@ -37,4 +37,28 @@ export class ProductService {
       .get<Product>("/catalog/products/" + id)
       .pipe(map((e) => new Product(e)));
   }
+
+  list(): Observable<Product[]> {
+    return this.http
+      .get<Product[]>("/catalog/products")
+      .pipe(
+        map((e) => e["hydra:member"].map((product) => new Product(product)))
+      );
+  }
+
+  add(product: Product): Observable<Product> {
+    return this.http.post<Product>("/catalog/products", product);
+  }
+
+  delete(id: number): Observable<boolean> {
+    return this.http.delete<boolean>("/catalog/products/" + id);
+  }
+
+  update(product: Product): Observable<Product> {
+    return this.http.put<Product>("/catalog/products/" + product.id, product);
+  }
+
+  get(id: number): Observable<Product> {
+    return this.http.get<Product>("/catalog/products/" + id);
+  }
 }

@@ -1,4 +1,4 @@
-@import "../../../..../../../assets/scss/variables";
+@import "src/assets/scss/variables";
 
 header {
   display: flex;
@@ -8,9 +8,19 @@ header {
   padding: 2rem 2rem;
   font-size: 23px;
   font-weight: 300;
+  border-bottom: #919191 1px solid;
 
   #logo {
     font-size: 35px;
     margin-right: auto;
+  }
+
+  #authentication {
+    display: flex;
+    align-items: center;
+    i {
+      margin: 0.5rem;
+      cursor: pointer;
+    }
   }
 }

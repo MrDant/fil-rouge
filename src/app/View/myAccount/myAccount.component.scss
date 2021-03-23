@@ -1,0 +1,31 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/theme";
+
+form {
+  margin: 1rem 15vw;
+  text-align: center;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    transform: translateX(-75px);
+    margin: 0 5rem;
+
+    label {
+      font-size: 19px;
+      font-weight: normal;
+      text-align: left;
+    }
+  }
+
+  .action-button {
+    margin-top: 1rem;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    button {
+      width: 250px;
+    }
+  }
+}

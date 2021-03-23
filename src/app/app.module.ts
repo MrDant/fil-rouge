@@ -4,8 +4,8 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { FooterComponent } from "./UI/layout/footer/footer.component";
 import { HeaderComponent } from "./UI/layout/header/header.component";
-import { EditPasswordComponent } from "./editPassword/editPassword.component";
-import { MyAccountComponent } from "./myAccount/myAccount.component";
+import { EditPasswordComponent } from "./View/editPassword/editPassword.component";
+import { MyAccountComponent } from "./View/myAccount/myAccount.component";
 import { HomeComponent } from "./View/home/home.component";
 import { LoginComponent } from "./View/login/login.component";
 import { RegisterComponent } from "./View/register/register.component";
@@ -19,6 +19,8 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { TokenInterceptor } from "./UI/token.interceptor";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
 import { ModalModule } from "angular-custom-modal";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { AdminModule } from "./View/admin/admin.module";
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { ModalModule } from "angular-custom-modal";
     BrowserAnimationsModule,
     HttpClientModule,
     ModalModule,
+    FontAwesomeModule,
+    AdminModule,
   ],
   providers: [
     {

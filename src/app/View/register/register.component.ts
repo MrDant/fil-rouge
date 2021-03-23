@@ -15,11 +15,11 @@ export class RegisterComponent {
     private userService: UserService
   ) {
     this.form = this.formBuilder.group({
-      firstName: ["", Validators.required],
-      lastName: ["", Validators.required],
+      firstname: ["", Validators.required],
+      lastname: ["", Validators.required],
       phone: [""],
       email: ["", Validators.email],
-      CP: [""],
+      postalcode: [""],
       address: "",
       city: "",
       confirmEmail: "",

@@ -1,0 +1,29 @@
+<h3>
+  {{ title }}
+  <a routerLink="./add">Ajouter <i class="fas fa-plus-circle"></i></a>
+</h3>
+
+<div id="list">
+  <div id="header"></div>
+  <div class="wrapper" [ngStyle]="gridTemplate">
+    <ng-container *ngFor="let item of items" class="row">
+      <div *ngFor="let property of properties">
+        {{ property.label + " : " + item[property.key] }}
+      </div>
+
+      <div style="display: flex; align-items: center">
+        Actions :
+        <i
+          class="fas fa-pen-square green"
+          style="margin-left: auto"
+          routerLink="./edit/{{ item.id }}"
+        ></i
+        ><i
+          class="fas fa-trash"
+          style="color: red; margin: 0 0.5rem"
+          (click)="delete(item.id)"
+        ></i>
+      </div>
+    </ng-container>
+  </div>
+</div>

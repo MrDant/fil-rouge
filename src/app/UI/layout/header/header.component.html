@@ -1,10 +1,13 @@
 <header>
   <a routerLink="/" id="logo">Verre-Tech</a>
-  <ng-container *ngIf="isConnected">
-    <a routerLink="/user" *ngIf="isAdminArea">Utilisateurs</a>
+  <ng-container *ngIf="!adminArea">
     <a routerLink="/">Accueil</a>
     <a routerLink="/catalogue">Catalogue</a>
     <a routerLink="/storehouse">Nos entrepôts</a>
+  </ng-container>
+  <ng-container *ngIf="adminArea">
+    <a routerLink="/admin/users" *ngIf="adminArea">Utilisateurs</a>
+    <a routerLink="/admin/products" *ngIf="adminArea">Produits</a>
   </ng-container>
   <div id="authentication">
     <ng-container *ngIf="!isConnected">
@@ -13,9 +16,9 @@
       >
     </ng-container>
     <ng-container *ngIf="isConnected">
-      <a routerLink="/account" *ngIf="isAdminArea"><i>account</i></a>
-      <a (click)="logout()">Déconnexion</a>
-      <a routerLink="/cart" *ngIf="!isAdminArea">cart</a>
+      <i routerLink="/account" class="fas fa-user-circle"></i>
+      <a (click)="logout()" *ngIf="adminArea">Déconnexion</a>
+      <i routerLink="/cart" *ngIf="!adminArea" class="fab fa-opencart"></i>
     </ng-container>
   </div>
 </header>

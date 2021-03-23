@@ -1,0 +1,17 @@
+<form [formGroup]="form" (submit)="formSubmit()">
+  <label for="name">Nom</label>
+  <input formControlName="name" id="name" />
+
+  <div class="w-50">
+    <label>Prix</label>
+    <input formControlName="price" type="number" />
+  </div>
+
+  <div class="w-50">
+    <label>Stock</label>
+    <input formControlName="stock" type="number" />
+  </div>
+  <label for="desc">Description</label>
+  <textarea formControlName="description" id="desc"></textarea>
+  <ng-content></ng-content>
+</form>

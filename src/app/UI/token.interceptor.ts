@@ -1,16 +1,20 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Injector } from "@angular/core";
 import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
   HttpInterceptor,
+  HttpErrorResponse,
 } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable, of, throwError } from "rxjs";
 import { environment } from "../../environments/environment";
+import { catchError } from "rxjs/operators";
+import { UserService } from "../Services/user.service";
+import { faWarnIfIconSpecMissing } from "@fortawesome/angular-fontawesome/shared/errors/warn-if-icon-spec-missing";
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
-  constructor() {}
+  constructor(private injector: Injector) {}
 
   intercept(
     request: HttpRequest<any>,
@@ -22,6 +26,13 @@ export class TokenInterceptor implements HttpInterceptor {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
     });
-    return next.handle(request);
+    return next.handle(request).pipe(
+      catchError((error) => {
+        if (error.status === 401) {
+          this.injector.get<UserService>(UserService).logout();
+        }
+        return throwError(error);
+      })
+    );
   }
 }

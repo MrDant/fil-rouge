@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from "./View/home/home.component";
-import { EditPasswordComponent } from "./editPassword/editPassword.component";
-import { MyAccountComponent } from "./myAccount/myAccount.component";
+import { EditPasswordComponent } from "./View/editPassword/editPassword.component";
+import { MyAccountComponent } from "./View/myAccount/myAccount.component";
 import { ProductDetailsComponent } from "./View/product-details/product-details.component";
 import { LoginComponent } from "./View/login/login.component";
 import { RegisterComponent } from "./View/register/register.component";
@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: "account", component: MyAccountComponent },
   { path: "about-us", component: AboutUsComponent },
   { path: "contact", component: ContactComponent },
-  { path: "editPassword", component: EditPasswordComponent },
+  { path: "change-password", component: EditPasswordComponent },
   { path: "about-us", component: AboutUsComponent },
   { path: "contact", component: ContactComponent },
   { path: "catalogue", component: CatalogueComponent },
