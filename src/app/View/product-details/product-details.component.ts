@@ -1,7 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { Product } from "../../Models/product";
 import { ProductService } from "../../Services/product.service";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
+import { OrderService } from "../../Services/order.service";
 
 @Component({
   selector: "app-product-details",
@@ -10,10 +11,13 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class ProductDetailsComponent implements OnInit {
   product: Product;
+  quantity = 1;
 
   constructor(
     private productService: ProductService,
-    private route: ActivatedRoute
+    private orderService: OrderService,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -22,5 +26,17 @@ export class ProductDetailsComponent implements OnInit {
         .getProductDetails(params.id)
         .subscribe((data) => (this.product = data))
     );
+  }
+
+  addProduct(): void {
+    if (this.quantity < 1 || this.quantity > this.product.stock) {
+      alert("La quantité est incorrecte");
+      return;
+    }
+    this.orderService.add(this.product, this.quantity).subscribe(() => {
+      if (confirm("Voulez-vous voir votre panier ?")) {
+        this.router.navigate(["/cart"]);
+      }
+    });
   }
 }

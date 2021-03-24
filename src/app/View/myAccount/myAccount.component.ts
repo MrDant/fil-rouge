@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { User } from "../../Models/user";
 import { UserService } from "../../Services/user.service";
 
 @Component({
@@ -16,7 +15,9 @@ export class MyAccountComponent implements OnInit {
     private userService: UserService
   ) {}
   onSubmit(): void {
-    this.userService.update(this.form.value).subscribe();
+    this.userService.update(this.form.value).subscribe(() => {
+      alert("Les informations ont été mise à jour");
+    });
   }
 
   ngOnInit(): void {
@@ -28,6 +29,7 @@ export class MyAccountComponent implements OnInit {
       postalcode: "",
       city: "",
       email: "",
+      id: "",
     });
     this.userService.currentUser.subscribe((user) => {
       if (user) {

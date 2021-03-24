@@ -1,6 +1,7 @@
 <h3>Mon compte</h3>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="wrapper">
+    <input type="hidden" formControlName="id" />
     <label for="lastname"> Nom : </label>
     <input
       id="lastname"

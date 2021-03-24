@@ -10,6 +10,7 @@ import { CatalogueComponent } from "./View/catalogue/catalogue.component";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
 import { NgModule } from "@angular/core";
 import { CategoryComponent } from "./View/category/category.component";
+import { CartComponent } from "./View/cart/cart.component";
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: "catalogue", component: CatalogueComponent },
   { path: "product/:id", component: ProductDetailsComponent },
   { path: "category/:id", component: CategoryComponent },
+  { path: "cart", component: CartComponent },
 ];
 
 @NgModule({

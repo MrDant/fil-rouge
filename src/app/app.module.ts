@@ -12,7 +12,7 @@ import { RegisterComponent } from "./View/register/register.component";
 import { CatalogueComponent } from "./View/catalogue/catalogue.component";
 import { ProductDetailsComponent } from "./View/product-details/product-details.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
@@ -22,6 +22,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AdminModule } from "./View/admin/admin.module";
 import { ModalModule } from "./Modal/modal.module";
 import { CategoryComponent } from "./View/category/category.component";
+import { CartComponent } from "./View/cart/cart.component";
+import { MatMenuModule } from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { CategoryComponent } from "./View/category/category.component";
     CatalogueComponent,
     ProductDetailsComponent,
     CategoryComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,8 @@ import { CategoryComponent } from "./View/category/category.component";
     ModalModule,
     FontAwesomeModule,
     AdminModule,
+    FormsModule,
+    MatMenuModule,
   ],
   providers: [
     {

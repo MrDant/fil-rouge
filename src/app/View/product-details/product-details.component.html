@@ -19,7 +19,7 @@
       </p>
       <br />
       <label class="texte-blanc">Choississez la quantité :</label>
-      <input list="quantity" />
+      <input list="quantity" [(ngModel)]="quantity" />
       <datalist id="quantity">
         <option value="">--Nombre voulu--</option>
         <option value="1"></option>
@@ -29,7 +29,7 @@
         <option value="5"></option>
         <option value="6"></option></datalist
       ><br /><br />
-      <button type="submit" class="button" color="blue">
+      <button class="button" color="blue" (click)="addProduct()">
         Ajouter au panier</button
       ><br />
       <p class="texte-blanc">En stock: {{ product?.stock }}</p>

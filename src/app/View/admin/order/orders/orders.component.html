@@ -1,0 +1,21 @@
+<h3>Liste des commandes</h3>
+
+<div id="list">
+  <div id="header"></div>
+  <div class="wrapper">
+    <ng-container *ngFor="let item of items" class="row">
+      <div>Email : {{ item.username }}</div>
+
+      <div>Nb article : {{ item.orderItems.length }}</div>
+
+      <div style="display: flex; align-items: center">
+        Actions :
+        <i
+          class="fas fa-trash"
+          style="color: red; margin: 0 0.5rem"
+          (click)="delete(item.id)"
+        ></i>
+      </div>
+    </ng-container>
+  </div>
+</div>

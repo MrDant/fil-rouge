@@ -60,7 +60,7 @@ export class UserService {
 
   update(user: User): Observable<User> {
     return this.http
-      .put<User>("/auth/user", user)
+      .put<User>("/auth/user/" + user.id, user)
       .pipe(tap(this.fetchCurentUser.bind(this)));
   }
 

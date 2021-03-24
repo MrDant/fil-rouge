@@ -8,6 +8,7 @@
   <ng-container *ngIf="adminArea">
     <a routerLink="/admin/users" *ngIf="adminArea">Utilisateurs</a>
     <a routerLink="/admin/products" *ngIf="adminArea">Produits</a>
+    <a routerLink="/admin/orders" *ngIf="adminArea">Commandes</a>
   </ng-container>
   <div id="authentication">
     <ng-container *ngIf="!isConnected">
@@ -16,8 +17,11 @@
       >
     </ng-container>
     <ng-container *ngIf="isConnected">
-      <i routerLink="/account" class="fas fa-user-circle"></i>
-      <a (click)="logout()" *ngIf="adminArea">Déconnexion</a>
+      <i class="fas fa-user-circle" [matMenuTriggerFor]="menu"></i>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/account">Mon compte</a>
+        <a mat-menu-item (click)="logout()">Déconnexion</a>
+      </mat-menu>
       <i routerLink="/cart" *ngIf="!adminArea" class="fab fa-opencart"></i>
     </ng-container>
   </div>

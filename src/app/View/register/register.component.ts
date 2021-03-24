@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { UserService } from "../../Services/user.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-register",
@@ -12,7 +13,8 @@ export class RegisterComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) {
     this.form = this.formBuilder.group({
       firstname: ["", Validators.required],
@@ -29,6 +31,8 @@ export class RegisterComponent {
   }
 
   onSubmit(): void {
-    this.userService.register(this.form.value).subscribe();
+    this.userService.register(this.form.value).subscribe(() => {
+      this.router.navigate(["/login"]);
+    });
   }
 }
