@@ -1,0 +1,38 @@
+<div class="content">
+    <div id="container">
+        <h3>{{nomVille}}</h3>
+        <table>
+            <tr>
+                <td>
+                    <div class="map">
+                        <iframe [src]="safeSrc"
+                            width="640" height="480">
+                        </iframe>
+                    </div>
+                </td>
+                <td>
+                    <div class="card">
+                        <div class="storageList">
+                            <span class="ville" (click)="changeMap('Versailles')"><span class="fav"><i class="fas fa-star"></i></span>Versailles</span><i class="fas fa-times cross"></i><br>
+                            <hr>
+                            <span class="ville" (click)="changeMap('Lyon')">Lyon</span><i class="fas fa-times cross"></i><br>
+                            <hr>
+                            <span class="ville" (click)="changeMap('Lille')">Lille</span><i class="fas fa-times cross"></i><br>
+                            <hr>
+                            <span class="ville" (click)="changeMap('Bordeaux')">Bordeaux</span><i class="fas fa-times cross"></i><br>
+                            <hr>
+                            <span class="ville" (click)="changeMap('Nantes')">Nantes</span><i class="fas fa-times cross"></i><br>
+                            <hr>
+                            <span class="ville" (click)="changeMap('Toulon')">Toulon</span><i class="fas fa-times cross"></i><br>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="navigation">
+        <input id="storageAddress" type="text" class="text-center" readonly=true [value]="address" />
+    </div>
+</div>

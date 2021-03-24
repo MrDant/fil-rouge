@@ -1,0 +1,75 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/theme";
+
+#content, .content {
+    background: #FAFAFA !important;
+}
+
+.navigation {
+    text-align: center;
+}
+
+#storageAddress {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5%;
+    width: 20%;
+    margin-bottom: 3%;
+}
+
+.storageList {
+    text-align: left;
+    background-color: #FAFAFA;
+    color: #333333;
+    border: 1px solid #333333;
+    border-radius: 20px 20px 20px 20px;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    margin-top: 1%;
+    width: 98%;
+}
+
+table {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table td{
+    width:  50%;
+}
+
+.fav{
+    color: #29a2fc;
+    margin-right: 1%;
+}
+
+.storageList hr {
+    width: 95%;
+}
+
+
+.card {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ville {
+    margin-left: 5%;
+}
+
+.ville:hover {
+    cursor: pointer;
+}
+
+.cross {
+    float:right;
+    margin-right: 5%;
+    color: #808080;
+}
+
+h3 {
+    color: #29a2fc;
+}

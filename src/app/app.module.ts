@@ -20,7 +20,8 @@ import { TokenInterceptor } from "./UI/token.interceptor";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AdminModule } from "./View/admin/admin.module";
-import { ModalModule } from "./Modal/modal.module";
+import { ModalModule } from './Modal/modal.module';
+import { StorageComponent } from './View/storage/storage.component';
 import { CategoryComponent } from "./View/category/category.component";
 import { CartComponent } from "./View/cart/cart.component";
 import { MatMenuModule } from "@angular/material/menu";
@@ -41,6 +42,7 @@ import { MatMenuModule } from "@angular/material/menu";
     ProductDetailsComponent,
     CategoryComponent,
     CartComponent,
+    StorageComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { RegisterComponent } from "./View/register/register.component";
 import { ContactComponent } from "./contact/contact.component";
 import { CatalogueComponent } from "./View/catalogue/catalogue.component";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
+import { StorageComponent } from './View/storage/storage.component';
 import { NgModule } from "@angular/core";
 import { CategoryComponent } from "./View/category/category.component";
 import { CartComponent } from "./View/cart/cart.component";
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: "product/:id", component: ProductDetailsComponent },
   { path: "category/:id", component: CategoryComponent },
   { path: "cart", component: CartComponent },
+  { path: "storage", component: StorageComponent }
 ];
 
 @NgModule({
