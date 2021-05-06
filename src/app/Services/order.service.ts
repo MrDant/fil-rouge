@@ -1,14 +1,17 @@
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import {NEVER, Observable} from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { Product } from "../Models/product";
 import { Order } from "../Models/order";
+import {catchError, tap} from "rxjs/operators";
+import {NotifierType} from "../_core/utils/utils";
+import {NotifierService} from "angular-notifier";
 
 @Injectable({
   providedIn: "root",
 })
 export class OrderService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private notifier: NotifierService) {}
 
   currentCart(): Observable<Order> {
     return this.http.get<Order>("/order");
@@ -29,6 +32,11 @@ export class OrderService {
   }
 
   buy(): Observable<boolean> {
-    return this.http.post<boolean>("/order/buy", {});
+    return this.http.post<boolean>("/order/buy", {}).pipe(
+      tap(() => this.notifier.notify(NotifierType.SUCCESS, "Commande envoyée au service, vous recevrez les informations par mail"),
+      catchError(error => {
+        this.notifier.notify(NotifierType.ERROR, error.error.message || "Une erreur est survenue");
+        return NEVER;
+      })));
   }
 }

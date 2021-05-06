@@ -20,11 +20,36 @@ import { TokenInterceptor } from "./UI/token.interceptor";
 import { AboutUsComponent } from "./View/aboutUs/aboutUs.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AdminModule } from "./View/admin/admin.module";
-import { ModalModule } from './Modal/modal.module';
-import { StorageComponent } from './View/storage/storage.component';
+import { ModalModule } from "./Modal/modal.module";
+import { StorageComponent } from "./View/storage/storage.component";
 import { CategoryComponent } from "./View/category/category.component";
 import { CartComponent } from "./View/cart/cart.component";
 import { MatMenuModule } from "@angular/material/menu";
+
+import {NgcCookieConsentModule, NgcCookieConsentConfig} from "ngx-cookieconsent";
+import {NotifierModule} from "angular-notifier";
+
+const cookieConfig: NgcCookieConsentConfig = {
+  cookie: {
+    domain: "localhost" // or 'your.domain.com' // it is mandatory to set a domain, for cookies to work properly (see https://goo.gl/S2Hy2A)
+  },
+  palette: {
+    popup: {
+      background: "#000"
+    },
+    button: {
+      background: "#FAFAFA"
+    }
+  },
+  theme: "classic",
+  type: "info",
+  content: {
+    message: "Ce site utilise un cookie afin de maintenir votre session active.",
+    dismiss: "Ok",
+    policy: "Cookie Policy"
+  }
+};
+
 
 @NgModule({
   declarations: [
@@ -56,6 +81,8 @@ import { MatMenuModule } from "@angular/material/menu";
     AdminModule,
     FormsModule,
     MatMenuModule,
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    NotifierModule
   ],
   providers: [
     {
