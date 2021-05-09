@@ -1,0 +1,18 @@
+<h3>Panier</h3>
+<p *ngIf="!items?.length" style="margin: 2rem">Nous n'avez aucun produit</p>
+<div class="grid" *ngIf="items?.length">
+  <div class="product-list">
+    <div class="product" *ngFor="let item of items">
+      <div style="padding: 1rem"><img [src]="item?.product?.image" /></div>
+      <div>
+        <p>{{ item?.product?.description }}</p>
+        <p>Quantity : {{ item.quantity }}</p>
+        <p>Prix : {{ item?.product?.price }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="totals">
+    <p>Montant total : {{ calculatePrice() || 0 }} €</p>
+    <button (click)="buy()" color="black">Commander</button>
+  </div>
+</div>

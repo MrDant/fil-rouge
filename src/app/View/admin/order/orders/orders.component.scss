@@ -1,0 +1,35 @@
+@import "src/assets/scss/variables";
+h3 {
+  position: relative;
+
+  a {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    text-transform: capitalize;
+    color: $blue;
+  }
+}
+
+#list {
+  background: white;
+  border: solid 1px #9a9a9a;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 2rem 5rem;
+
+  .wrapper {
+    font-size: 20px;
+    color: #333333;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr 1fr;
+    div {
+      margin: 0.5rem 0;
+    }
+  }
+
+  i {
+    cursor: pointer;
+  }
+}

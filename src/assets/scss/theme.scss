@@ -1,0 +1,35 @@
+@import "variables";
+
+@mixin form() {
+  background: $bg_form;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: #00000054 0px 1px 6px;
+}
+
+input {
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 20px;
+  font-weight: 400;
+  border: 1px solid #707070;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+h3 {
+  color: $green;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+label {
+  font-size: 19px;
+}
+
+.green {
+  color: $green;
+}

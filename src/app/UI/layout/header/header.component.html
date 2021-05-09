@@ -1,0 +1,28 @@
+<header>
+  <a routerLink="/" id="logo">Verre-Tech</a>
+  <ng-container *ngIf="!adminArea">
+    <a routerLink="/">Accueil</a>
+    <a routerLink="/catalogue">Catalogue</a>
+    <a routerLink="/storage">Nos entrepôts</a>
+  </ng-container>
+  <ng-container *ngIf="adminArea">
+    <a routerLink="/admin/users" *ngIf="adminArea">Utilisateurs</a>
+    <a routerLink="/admin/products" *ngIf="adminArea">Produits</a>
+    <a routerLink="/admin/orders" *ngIf="adminArea">Commandes</a>
+  </ng-container>
+  <div id="authentication">
+    <ng-container *ngIf="!isConnected">
+      <a routerLink="/login">Connexion</a>/<a routerLink="/register"
+        >Inscription</a
+      >
+    </ng-container>
+    <ng-container *ngIf="isConnected">
+      <i class="fas fa-user-circle" [matMenuTriggerFor]="menu"></i>
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/account">Mon compte</a>
+        <a mat-menu-item (click)="logout()">Déconnexion</a>
+      </mat-menu>
+      <i routerLink="/cart" *ngIf="!adminArea" class="fab fa-opencart"></i>
+    </ng-container>
+  </div>
+</header>

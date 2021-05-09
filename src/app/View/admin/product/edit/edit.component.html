@@ -1,0 +1,6 @@
+<h3>Modifier {{ product?.name }}</h3>
+<app-product-form (onSend)="updateProduct($event)" [product]="product">
+  <div style="text-align: center; margin-top: 2rem">
+    <button type="submit" color="blue">Modifier</button>
+  </div>
+</app-product-form>

@@ -1,0 +1,54 @@
+<h3>Mon compte</h3>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="wrapper">
+    <input type="hidden" formControlName="id" />
+    <label for="lastname"> Nom : </label>
+    <input
+      id="lastname"
+      type="text"
+      placeholder="Dupont"
+      formControlName="lastname"
+    />
+
+    <label for="firstname"> Prenom : </label>
+    <input
+      id="firstname"
+      type="text"
+      placeholder="Jean"
+      formControlName="firstname"
+    />
+    <label for="email"> Email : </label>
+    <input
+      type="text"
+      id="email"
+      placeholder="jeandupont@gmail.com"
+      formControlName="email"
+    />
+    <label for="phone"> Téléphone : </label>
+    <input
+      id="phone"
+      type="number"
+      placeholder="06000000"
+      formControlName="phone"
+    /><label for="address"> Adresse : </label>
+    <input
+      id="address"
+      type="text"
+      placeholder="2 rue des Jacquelines"
+      formControlName="address"
+    /><label for="CP"> Code Postal : </label>
+    <input
+      id="CP"
+      type="number"
+      placeholder="54000"
+      formControlName="postalcode"
+    /><label for="city"> Ville : </label>
+    <input id="city" type="text" placeholder="Nancy" formControlName="city" />
+  </div>
+  <div class="action-button">
+    <button routerLink="/change-password" color="green">
+      Modifier le mot de passe
+    </button>
+    <button type="submit" color="blue">Sauvegarder</button>
+  </div>
+</form>

@@ -1,0 +1,14 @@
+@import "../../../../assets/scss/variables";
+
+footer {
+  text-align: end;
+  background: $black;
+  color:white;
+  font-weight: 300;
+  padding: 2rem 2rem 2.5rem;
+  border-top: #919191 1px solid;
+
+  span {
+    margin: 0 1rem;
+  }
+}

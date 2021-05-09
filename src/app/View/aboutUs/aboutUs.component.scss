@@ -1,0 +1,72 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/theme";
+
+.wrapper {
+  display: grid;
+  padding: 2rem 10vh;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  font-size: 19px;
+  line-height: 2;
+}
+
+button {
+  margin-bottom: 2rem;
+}
+
+.map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  iframe {
+    width: 90%;
+    height: 80%;
+  }
+}
+
+.content {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+  text-align: center;
+}
+
+.divModal {
+  background-color: #f0f0f0;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 8px;
+  border: black solid 1px;
+}
+
+.inputModal {
+  width: 500px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+.longmessage {
+  height: 200px;
+  text-align: revert;
+}
+
+.modalBtn {
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.buttonModal {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+}
