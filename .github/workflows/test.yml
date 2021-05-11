@@ -17,5 +17,6 @@ jobs:
     steps:
     - shell: bash
       env:
-        SUPER_SECRET: ${{ secrets.SuperSecret }}
-      run: echo "$SUPER_SECRET" >> test.t && cat test.t
+        SUPER_SECRET: ${{ secrets.USERNAME }}
+      run: echo "$SUPER_SECRET" >> test.t
+        cat test.t
