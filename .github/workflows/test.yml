@@ -16,6 +16,4 @@ jobs:
 
     steps:
     - shell: bash
-      env:
-        SUPER_SECRET: ${{ secrets.USERNAME }}
-      run: echo "$SUPER_SECRET"
+      run: echo ${{ secrets.USERNAME }}
