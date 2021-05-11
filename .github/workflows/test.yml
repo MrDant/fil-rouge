@@ -15,5 +15,7 @@ jobs:
         node-version: [14.x]
 
     steps:
-    -
-        run: echo ${{ secrets.USERNAME }} ${{ secrets.TOKEN }}
+    - shell: bash
+      env:
+        SUPER_SECRET: ${{ secrets.SuperSecret }}
+      run: echo "$SUPER_SECRET" >> test.t && cat test.t
