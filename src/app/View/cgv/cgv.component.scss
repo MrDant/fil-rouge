@@ -1,0 +1,12 @@
+@import "src/assets/scss/variables";
+
+.card {
+  background: $bg_form;
+  margin:  2rem 5rem;
+  padding: 0.2rem 1rem;
+  border-radius: 13px;
+}
+
+h1 {
+  text-align: center;
+}

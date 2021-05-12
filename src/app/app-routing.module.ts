@@ -12,6 +12,7 @@ import { StorageComponent } from './View/storage/storage.component';
 import { NgModule } from "@angular/core";
 import { CategoryComponent } from "./View/category/category.component";
 import { CartComponent } from "./View/cart/cart.component";
+import {CGVComponent} from "./View/cgv/cgv.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       { path: "login", component: LoginComponent },
       { path: "register", component: RegisterComponent },
     ],
+  },
+  {
+    path: "cgv",
+    component: CGVComponent
   },
   { path: "account", component: MyAccountComponent },
   { path: "about-us", component: AboutUsComponent },
