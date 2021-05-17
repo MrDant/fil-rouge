@@ -1,5 +1,3 @@
-/* tslint:disable:component-selector */
-
 import {
   Component,
   OnDestroy,
@@ -10,17 +8,18 @@ import {
   ChangeDetectorRef,
   Input,
   HostListener,
-} from '@angular/core';
+} from "@angular/core";
 
 @Component({
-  selector: 'modal',
-  templateUrl: 'modal.component.html',
-  styleUrls: ['modal.component.scss'],
+  // tslint:disable-next-line:component-selector
+  selector: "modal",
+  templateUrl: "modal.component.html",
+  styleUrls: ["modal.component.scss"],
 })
 export class ModalComponent implements OnDestroy {
-  @ContentChild('modalHeader') header: TemplateRef<any>;
-  @ContentChild('modalBody') body: TemplateRef<any>;
-  @ContentChild('modalFooter') footer: TemplateRef<any>;
+  @ContentChild("modalHeader") header: TemplateRef<any>;
+  @ContentChild("modalBody") body: TemplateRef<any>;
+  @ContentChild("modalFooter") footer: TemplateRef<any>;
   @Input() closeOnOutsideClick = true;
 
   visible = false;
@@ -38,7 +37,7 @@ export class ModalComponent implements OnDestroy {
   }
 
   open(): void {
-    document.body.classList.add('modal-open');
+    document.body.classList.add("modal-open");
 
     this.visible = true;
     setTimeout(() => {
@@ -47,7 +46,7 @@ export class ModalComponent implements OnDestroy {
   }
 
   close(): void {
-    document.body.classList.remove('modal-open');
+    document.body.classList.remove("modal-open");
 
     this.visibleAnimate = false;
     setTimeout(() => {
@@ -56,17 +55,17 @@ export class ModalComponent implements OnDestroy {
     }, 200);
   }
 
-  @HostListener('click', ['$event'])
+  @HostListener("click", ["$event"])
   onContainerClicked(event: MouseEvent): void {
-    if ((<HTMLElement>event.target).classList.contains('modal') && this.isTopMost() && this.closeOnOutsideClick) {
+    if ((event.target as HTMLElement).classList.contains("modal") && this.isTopMost() && this.closeOnOutsideClick) {
       this.close();
     }
   }
 
-  @HostListener('document:keydown', ['$event'])
+  @HostListener("document:keydown", ["$event"])
   onKeyDownHandler(event: KeyboardEvent) {
     // If ESC key and TOP MOST modal, close it.
-    if (event.key === 'Escape' && this.isTopMost()) {
+    if (event.key === "Escape" && this.isTopMost()) {
       this.close();
     }
   }
@@ -75,6 +74,6 @@ export class ModalComponent implements OnDestroy {
    * Returns true if this modal is the top most modal.
    */
   isTopMost(): boolean {
-    return !this.elementRef.nativeElement.querySelector(':scope modal > .modal');
+    return !this.elementRef.nativeElement.querySelector(":scope modal > .modal");
   }
 }
