@@ -10,6 +10,9 @@ import {
 import { Observable } from "rxjs";
 import { UserService } from "../../Services/user.service";
 
+/**
+ * Footer component
+ */
 @Injectable({
     providedIn: "root",
 })
