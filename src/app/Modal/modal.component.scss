@@ -2,14 +2,14 @@
  * A more specific selector overwrites bootstrap display properties, but they still enable users
  * to overwite them on their apps.
  */
-/deep/ modal .modal {
+ modal .modal {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
 }
 
-/deep/ .modal {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -19,6 +19,6 @@
   z-index: 42;
 }
 
-/deep/ .modal.in {
+.modal.in {
   opacity: 1;
 }
