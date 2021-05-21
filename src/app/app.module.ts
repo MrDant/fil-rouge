@@ -28,7 +28,7 @@ import { MatMenuModule } from "@angular/material/menu";
 
 import {NgcCookieConsentModule, NgcCookieConsentConfig} from "ngx-cookieconsent";
 import {NotifierModule} from "angular-notifier";
-import { CGVComponent } from './View/cgv/cgv.component';
+import {CGVComponent} from "./View/cgv/cgv.component";
 
 const cookieConfig: NgcCookieConsentConfig = {
   cookie: {
