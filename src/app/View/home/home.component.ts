@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   current = 0;
 
   constructor(private productService: ProductService) {
-    console.error("coucou abdel");
   }
 
   ngOnInit(): void {

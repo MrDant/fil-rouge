@@ -18,15 +18,13 @@ export class TokenInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    console.log("intercept");
     request = request.clone({
       url: environment.apiUrl + request.url,
       setHeaders: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
-        "Access-Control-Allow-Origin": "*",
+        "TestHeader": "je suis un test",
       },
     });
-    console.log(request);
     return next.handle(request).pipe(
       catchError((error) => {
         if (error.status === 401) {
