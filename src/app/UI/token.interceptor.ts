@@ -6,11 +6,10 @@ import {
   HttpInterceptor,
   HttpErrorResponse,
 } from "@angular/common/http";
-import { Observable, of, throwError } from "rxjs";
+import { Observable, throwError } from "rxjs";
 import { environment } from "../../environments/environment";
 import { catchError } from "rxjs/operators";
 import { UserService } from "../Services/user.service";
-import { faWarnIfIconSpecMissing } from "@fortawesome/angular-fontawesome/shared/errors/warn-if-icon-spec-missing";
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
@@ -27,6 +26,7 @@ export class TokenInterceptor implements HttpInterceptor {
         "Access-Control-Allow-Origin": "*",
       },
     });
+    console.log(request);
     return next.handle(request).pipe(
       catchError((error) => {
         if (error.status === 401) {
