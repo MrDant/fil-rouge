@@ -22,7 +22,6 @@ export class TokenInterceptor implements HttpInterceptor {
       url: environment.apiUrl + request.url,
       setHeaders: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
-        "TestHeader": "je suis un test",
       },
     });
     return next.handle(request).pipe(
