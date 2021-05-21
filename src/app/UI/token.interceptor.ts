@@ -24,6 +24,7 @@ export class TokenInterceptor implements HttpInterceptor {
       url: environment.apiUrl + request.url,
       setHeaders: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Access-Control-Allow-Origin": "*",
       },
     });
     return next.handle(request).pipe(
