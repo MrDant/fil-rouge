@@ -35,9 +35,6 @@ jobs:
       with:
           username: "00maeldant00"
           password: "ccb441b4-5cb2-41a2-8964-a0c6d4f1d4fc"
-          
-    - name: ls
-      run: ls -la
 
     - name: Build and push
       uses: docker/build-push-action@v2
