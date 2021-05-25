@@ -45,12 +45,14 @@ jobs:
     - name: Déployer en local
       run: |
         docker rm -f front
+        docker pull 00maeldant00/filrouge-front:latest
         docker run --rm -d -p 81:80 --name front 00maeldant00/filrouge-front:latest
 
     - name: Déployer sur RIL-L12-GRPA-01.numerilab-cesi.fr
       run: |
         export DOCKER_HOST=ssh://runner@RIL-L12-GRPA-01.numerilab-cesi.fr
         docker rm -f front
+        docker pull 00maeldant00/filrouge-front:latest
         docker run --rm -d -p 81:80 --name front 00maeldant00/filrouge-front:latest
         export DOCKER_HOST=
 
