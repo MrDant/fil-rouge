@@ -43,11 +43,14 @@ jobs:
         tags: 00maeldant00/filrouge-front:latest
 
     - name: Déployer en local
-      run: docker run --rm -d -p 81:80 00maeldant00/filrouge-front:latest
+      run: |
+        docker rm -f front
+        docker run --rm -d -p 81:80 00maeldant00/filrouge-front:latest
 
     - name: Déployer sur RIL-L12-GRPA-01.numerilab-cesi.fr
       run: |
         export DOCKER_HOST=ssh://RIL-L12-GRPA-01.numerilab-cesi.fr
+        docker rm -f front
         docker run --rm -d -p 81:80 00maeldant00/filrouge-front:latest
         export DOCKER_HOST=
 
