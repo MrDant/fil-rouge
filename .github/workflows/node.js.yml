@@ -24,10 +24,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: npm install and npm run build
-      run: |
-        npm ci
-        npm run build
+    - name: npm install
+      run: npm ci
+      
+    - name: build
+      run: npm run build
       
     - name: Login to DockerHub
       uses: docker/login-action@v1
@@ -35,7 +36,7 @@ jobs:
           username: "00maeldant00"
           password: "ccb441b4-5cb2-41a2-8964-a0c6d4f1d4fc"
           
-    - name: LS
+    - name: ls
       run: ls -la
 
     - name: Build and push
